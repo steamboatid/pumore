@@ -90,5 +90,10 @@
             "tests/_files/CoveredFunction.php",
             "tests/_files/NamespaceCoveredFunction.php"
         ]
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "9.5.11-dev"
+        }
     }
 }
