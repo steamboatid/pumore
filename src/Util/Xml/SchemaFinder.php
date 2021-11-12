@@ -33,8 +33,8 @@ final class SchemaFinder
         if (!is_file($filename)) {
             throw new Exception(
                 sprintf(
-                    'Schema for PHPUnit %s is not available',
-                    $version
+                    'Schema for PHPUnit %s is not available: %s',
+                    $version, $filename
                 )
             );
         }

@@ -6,7 +6,7 @@
         </xs:documentation>
         <xs:appinfo source="https://phpunit.de/documentation.html"/>
     </xs:annotation>
-    <xs:element name="phpunit" type="phpUnitType">
+    <xs:element name="pumore" type="phpUnitType">
         <xs:annotation>
             <xs:documentation>Root Element</xs:documentation>
         </xs:annotation>

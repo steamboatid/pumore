@@ -1,6 +1,6 @@
 #!/usr/bin/env php
 <?php declare(strict_types=1);
-print 'phpunit/phpunit: ';
+print 'pibi/pumore: ';
 
 $tag = @\exec('git describe --tags 2>&1');
 

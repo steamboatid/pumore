@@ -4,6 +4,7 @@ dirnow=$(dirname $(realpath $0))
 dirroot=$(realpath "$dirnow/../..")
 printf "\n --- ROOT directory: $dirroot \n"
 
+cd $dirroot
 
 apt install ant 2>&1 -fy 2>&1 |
 	grep -iv "newest\|cli interface\|reading\|building"

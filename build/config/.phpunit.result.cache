@@ -1,1 +1,1 @@
-{"version":1,"defects":{"\/root\/pu\/ups\/tests\/fail\/fail.phpt":3},"times":{"\/root\/pu\/ups\/tests\/fail\/fail.phpt":0.039}}
+{"version":1,"defects":{"\/root\/pu\/ups\/tests\/fail\/fail.phpt":3,"\/root\/pumore\/tests\/fail\/fail.phpt":3},"times":{"\/root\/pu\/ups\/tests\/fail\/fail.phpt":0.039,"\/root\/pumore\/tests\/fail\/fail.phpt":0.032}}

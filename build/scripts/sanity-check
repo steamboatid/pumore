@@ -1,8 +1,11 @@
 #!/usr/bin/env bash
 
+dirnow=$(dirname $(realpath $0))
+dirroot=$(realpath "$dirnow/../..")
+
 PHP_BINARY=${PHP_BINARY:-php}
 
-${PHP_BINARY} -d assert.exception=On -d zend.assertions=1 ./phpunit --configuration ./build/config/github-ci-fail.xml
+${PHP_BINARY} -d assert.exception=On -d zend.assertions=1 $dirroot/phpunit --configuration $dirroot/build/config/github-ci-fail.xml
 
 if [ $? -eq 0 ]; then
   echo "This test should have failed.";

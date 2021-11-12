@@ -1,23 +1,29 @@
 {
-    "name": "phpunit/phpunit",
-    "description": "The PHP Unit Testing framework.",
+    "name": "phibi/pumore",
+    "description": "The PHP Unit Testing framework. It's fork to PHPUnit",
     "type": "library",
     "keywords": [
         "phpunit",
+        "pumore",
         "xunit",
         "testing"
     ],
-    "homepage": "https://phpunit.de/",
+    "homepage": "https://github.com/steamboatid/pumore/",
     "license": "BSD-3-Clause",
     "authors": [
         {
+            "name": "Dwi Kristianto",
+            "email": "steamboatid@gmail.com",
+            "role": "lead"
+        },
+        {
             "name": "Sebastian Bergmann",
             "email": "sebastian@phpunit.de",
-            "role": "lead"
+            "role": "previous developer lead"
         }
     ],
     "support": {
-        "issues": "https://github.com/sebastianbergmann/phpunit/issues"
+        "issues": "https://github.com/steamboatid/pumore/issues"
     },
     "prefer-stable": true,
     "require": {
@@ -51,8 +57,7 @@
         "sebastian/version": "^3.0.2"
     },
     "require-dev": {
-        "ext-PDO": "*",
-        "phpspec/prophecy-phpunit": "^2.0.1"
+        "ext-PDO": "*"
     },
     "config": {
         "platform": {
@@ -85,10 +90,5 @@
             "tests/_files/CoveredFunction.php",
             "tests/_files/NamespaceCoveredFunction.php"
         ]
-    },
-    "extra": {
-        "branch-alias": {
-            "dev-master": "9.5-dev"
-        }
     }
 }

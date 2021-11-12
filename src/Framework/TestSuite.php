@@ -410,8 +410,8 @@ class TestSuite implements IteratorAggregate, Reorderable, SelfDescribing, Test
             return;
         }
 
-        $numTests = count($this->tests);
-				$this->declaredClasses = get_declared_classes();
+        $numTests              = count($this->tests);
+        $this->declaredClasses = get_declared_classes();
 
         // The given file may contain further stub classes in addition to the
         // test class itself. Figure out the actual test class.

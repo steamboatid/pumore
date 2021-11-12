@@ -62,4 +62,9 @@ final class Version
     {
         return 'PHPUnit ' . self::id() . ' by Sebastian Bergmann and contributors.';
     }
+
+    public static function getVersionStringNew(): string
+    {
+        return 'PUmore ' . self::id() . ' by Dwi Kristianto, Sebastian Bergmann and contributors.';
+    }
 }

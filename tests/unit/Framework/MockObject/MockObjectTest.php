@@ -597,9 +597,9 @@ final class MockObjectTest extends TestCase
              ->will(
                  $this->returnCallback(
                      static function () use (&$actualArguments): void
-                    {
-                        $actualArguments = \func_get_args();
-                    }
+                     {
+                         $actualArguments = \func_get_args();
+                     }
                  )
              );
 
@@ -625,9 +625,9 @@ final class MockObjectTest extends TestCase
              ->will(
                  $this->returnCallback(
                      static function () use (&$actualArguments): void
-                    {
-                        $actualArguments = \func_get_args();
-                    }
+                     {
+                         $actualArguments = \func_get_args();
+                     }
                  )
              );
 
