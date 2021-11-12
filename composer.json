@@ -1,6 +1,6 @@
 {
     "name": "phibi/pumore",
-    "description": "The PHP Unit Testing framework. It's fork to PHPUnit",
+    "description": "The PHP Unit Testing framework. It's fork to PHPUnit with chunk featuare",
     "type": "library",
     "keywords": [
         "phpunit",
@@ -25,6 +25,7 @@
     "support": {
         "issues": "https://github.com/steamboatid/pumore/issues"
     },
+		"minimum-stability": "stable",
     "prefer-stable": true,
     "require": {
         "php": ">=7.3",
@@ -95,5 +96,10 @@
         "branch-alias": {
             "dev-master": "9.5.11-dev"
         }
-    }
+    },
+		"scripts": {
+			"analyze": "phpstan analyze",
+			"style": "php-cs-fixer fix --verbose --ansi",
+			"test": "phpunit -v"
+		}
 }
