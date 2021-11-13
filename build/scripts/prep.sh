@@ -34,3 +34,5 @@ php $dirroot/build/scripts/generate-global-assert-wrappers.php
 
 printf "\n\n --- generate current diff \n"
 git diff current.diff || echo "Run 'php build/scripts/generate-global-assert-wrappers.php' to regenerate global assert wrappers!"
+
+printf "\n\n"

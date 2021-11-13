@@ -1,29 +1,32 @@
-# PHPUnit
+# PUmore
 
+PUmore is PHPUnit fork that add some new features, such as divide tests into chunks.
 PHPUnit is a programmer-oriented testing framework for PHP. It is an instance of the xUnit architecture for unit testing frameworks.
-
-[![Latest Stable Version](https://img.shields.io/packagist/v/phpunit/phpunit.svg?style=flat-square)](https://packagist.org/packages/phpunit/phpunit)
-[![Minimum PHP Version](https://img.shields.io/badge/php-%3E%3D%207.3-8892BF.svg?style=flat-square)](https://php.net/)
-[![CI Status](https://github.com/sebastianbergmann/phpunit/workflows/CI/badge.svg?branch=9.5&event=push)](https://phpunit.de/build-status.html)
-[![Type Coverage](https://shepherd.dev/github/sebastianbergmann/phpunit/coverage.svg)](https://shepherd.dev/github/sebastianbergmann/phpunit)
 
 ## Installation
 
-We distribute a [PHP Archive (PHAR)](https://php.net/phar) that has all required (as well as some optional) dependencies of PHPUnit bundled in a single file:
+For the time being,
+We don't distribute a [PHP Archive (PHAR)](https://php.net/phar) yet.
+Maybe in the future if someone really needed it.
 
-```bash
-$ wget https://phar.phpunit.de/phpunit-X.Y.phar
+Alternatively,
+you may use [Composer](https://getcomposer.org/) to download and install PUmore as well as its dependencies.
 
-$ php phpunit-X.Y.phar --version
-```
+The steps are simple :
+a. install composer
+b. cd project_folder_path
+c. composer install phibi/pumore --dev
 
-Please replace `X.Y` with the version of PHPUnit you are interested in.
-
-Alternatively, you may use [Composer](https://getcomposer.org/) to download and install PHPUnit as well as its dependencies. Please refer to the "[Getting Started](https://phpunit.de/getting-started-with-phpunit.html)" guide for details on how to install PHPUnit.
+If you need to install it as Global Package, here is :
+a. install composer as Global
+b. cd ~.config/composer
+--- or any directory you install composer
+c. composer global install phibi/pumore
 
 ## Contribute
 
-Please refer to [CONTRIBUTING.md](https://github.com/sebastianbergmann/phpunit/blob/master/.github/CONTRIBUTING.md) for information on how to contribute to PHPUnit and its related projects.
+Same as PHPUnit, PUmore also welcome for contributions and idea.
+Please refer to [CONTRIBUTING.md](https://github.com/steamboatid/pumore/blob/master/.github/CONTRIBUTING.md) for information on how to contribute to PUmore and its related projects.
 
 ## List of Contributors
 
@@ -40,4 +43,3 @@ A very special thanks to everyone who has contributed to the documentation and h
 * [Japanese](https://github.com/sebastianbergmann/phpunit-documentation-japanese/graphs/contributors)
 * [Brazilian Portuguese](https://github.com/sebastianbergmann/phpunit-documentation-brazilian-portuguese/graphs/contributors)
 * [Simplified Chinese](https://github.com/sebastianbergmann/phpunit-documentation-chinese/graphs/contributors)
-

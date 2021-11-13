@@ -1,1 +1,1 @@
-{"version":1,"defects":[],"times":{"PHPUnit\\TestFixture\\Phar\\GreeterTest::testGreets":0,"PHPUnit\\TestFixture\\Phar\\GreeterTest::testGreetsInIsolation":0.001,"Issue4399Test::testOne":0}}
+{"version":1,"defects":[],"times":{"PHPUnit\\TestFixture\\Phar\\GreeterTest::testGreets":0,"PHPUnit\\TestFixture\\Phar\\GreeterTest::testGreetsInIsolation":0,"Issue4399Test::testOne":0}}
