@@ -1,12 +1,13 @@
+/tools/*                binary
+/build/scripts/*        binary
+/phpunit                binary
+/pumore                 binary
 /.docker                export-ignore
 /.github                export-ignore
 /.phive                 export-ignore
 /.psalm                 export-ignore
 /build                  export-ignore
 /tools                  export-ignore
-/tools/*                binary
-/phpunit                binary
-/pumore                 binary
 /tests                  export-ignore
 /.editorconfig          export-ignore
 /.gitattributes         export-ignore

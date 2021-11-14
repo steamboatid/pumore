@@ -137,7 +137,9 @@ class Command
             return $this->handleListTestsXml($suite, $this->arguments['listTestsXml'], $exit);
         }
 
-        $this->arguments['paged'] = false;
+        $this->arguments['paged']        = false;
+        $this->arguments['totalTests']   = -1;
+        $this->arguments['chunkPerPage'] = -1;
 
         if (isset($this->arguments['chunkIndex'], $this->arguments['chunkNumber'])) {
             $chunkIndex  = (int) $this->arguments['chunkIndex'];
@@ -175,6 +177,7 @@ class Command
                     $this->arguments['chunkPerPage'] = $chunkPerPage;
                     $this->arguments['totalTests']   = $testNum;
                     $this->arguments['paged']        = true;
+                    $this->arguments['allows']       = $allows;
                 }
             }
         }

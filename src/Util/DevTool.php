@@ -92,7 +92,7 @@ class DevTool
             if (isset($trc['file'], $trc['line'])) {
                 $strs[] = $trc['file'] . ' -- ' . $trc['line'];
 
-                if (count($strs) > 3) {
+                if (count($strs) > 5) {
                     break;
                 }
             }

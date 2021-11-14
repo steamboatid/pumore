@@ -262,12 +262,7 @@ class DefaultResultPrinter extends Printer implements ResultPrinter
     public function startTestSuite(TestSuite $suite): void
     {
         if ($this->numTests == -1) {
-            $this->numTests = count($suite);
-
-            if (isset($this->arguments['chunkPerPage'], $this->arguments['totalTests'])) {
-                $this->numTests = (int) $this->arguments['chunkPerPage'];
-            }
-
+            $this->numTests      = count($suite);
             $this->numTestsWidth = strlen((string) $this->numTests);
             $this->maxColumn     = $this->numberOfColumns - strlen('  /  (XXX%)') - (2 * $this->numTestsWidth);
         }

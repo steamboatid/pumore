@@ -410,8 +410,7 @@ class TestSuite implements IteratorAggregate, Reorderable, SelfDescribing, Test
             return;
         }
 
-        $numTests              = count($this->tests);
-        $this->declaredClasses = get_declared_classes();
+        $numTests = count($this->tests);
 
         // The given file may contain further stub classes in addition to the
         // test class itself. Figure out the actual test class.
@@ -695,7 +694,7 @@ class TestSuite implements IteratorAggregate, Reorderable, SelfDescribing, Test
                 if ($test instanceof TestCase || $test instanceof PhptTestCase) {
                     $testName = $test->getTestName();
 
-                    if (!in_array($testName, $this->allows, true)) {
+                    if (!in_array($testName, $this->allows, false)) {
                         continue;
                     }
                 }

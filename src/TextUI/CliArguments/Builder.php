@@ -773,12 +773,16 @@ final class Builder
 
                     break;
 
+                case '--ci':
                 case '--chunk-idx':
+                case '--chunk-index':
                     $chunkIndex = (int) $option[1];
 
                     break;
 
+                case '--cn':
                 case '--chunk-num':
+                case '--chunk-number':
                     $chunkNumber = (int) $option[1];
 
                     break;

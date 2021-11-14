@@ -41,7 +41,7 @@ final class Version
         }
 
         if (self::$version === '') {
-            self::$version = (new VersionId('9.5.11', dirname(__DIR__, 2)))->getVersion();
+            self::$version = (new VersionId('9.5.10', dirname(__DIR__, 2)))->getVersion();
         }
 
         return self::$version;
@@ -61,10 +61,5 @@ final class Version
     public static function getVersionString(): string
     {
         return 'PHPUnit ' . self::id() . ' by Sebastian Bergmann and contributors.';
-    }
-
-    public static function getVersionStringNew(): string
-    {
-        return 'PUmore ' . self::id() . ' by Dwi Kristianto, Sebastian Bergmann and contributors.';
     }
 }

@@ -10,15 +10,7 @@ printf "\n\n --- execute php-cs-fixer \n"
 $dirroot/tools/php-cs-fixer fix
 
 printf "\n\n --- execute psalm: delete cache \n"
-rm -rf $dirroot/.psalm/cache
-
-printf "\n\n --- execute psalm: static \n"
-$dirroot/tools/psalm --config=.psalm/config.xml --no-cache --clear-global-cache
-$dirroot/tools/psalm --config=.psalm/static-analysis.xml
-
-printf "\n\n --- execute psalm: find ununsed suppress \n"
-$dirroot/tools/psalm --config=.psalm/config.xml --no-cache --clear-global-cache
-$dirroot/tools/psalm --config=.psalm/config.xml --find-unused-psalm-suppress
+rm -rf $dirroot/.psalm/cache /tmp/.psalm/cache
 
 printf "\n\n --- execute psalm: last \n"
 $dirroot/tools/psalm --config=.psalm/config.xml --no-cache --clear-global-cache

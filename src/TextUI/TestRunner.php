@@ -37,6 +37,7 @@ use PHPUnit\Runner\BaseTestRunner;
 use PHPUnit\Runner\BeforeFirstTestHook;
 use PHPUnit\Runner\DefaultTestResultCache;
 use PHPUnit\Runner\Extension\ExtensionHandler;
+use PHPUnit\Runner\Filter\ChunkFilterIterator;
 use PHPUnit\Runner\Filter\ExcludeGroupFilterIterator;
 use PHPUnit\Runner\Filter\Factory;
 use PHPUnit\Runner\Filter\IncludeGroupFilterIterator;
@@ -706,6 +707,7 @@ class TestRunner extends BaseTestRunner
             $this->write(PHP_EOL);
         }
 
+        //\PHPUnit\Util\DevTool::print_rdie($suite->count());
         $suite->run($result, $this);
 
         foreach ($this->extensions as $extension) {
@@ -1207,17 +1209,26 @@ class TestRunner extends BaseTestRunner
     /**
      * @throws Exception
      */
-    private function processSuiteFilters(TestSuite $suite, array $arguments): void
+    private function processSuiteFilters(TestSuite $suite, array &$arguments): void
     {
         if (!$arguments['filter'] &&
             empty($arguments['groups']) &&
             empty($arguments['excludeGroups']) &&
             empty($arguments['testsCovering']) &&
-            empty($arguments['testsUsing'])) {
+            empty($arguments['testsUsing']) &&
+            !($arguments['paged'])
+                    ) {
             return;
         }
 
         $filterFactory = new Factory;
+
+        if ($arguments['paged']) {
+            $filterFactory->addFilter(
+                new ReflectionClass(ChunkFilterIterator::class),
+                $arguments['allows']
+            );
+        }
 
         if (!empty($arguments['excludeGroups'])) {
             $filterFactory->addFilter(

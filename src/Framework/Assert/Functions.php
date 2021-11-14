@@ -3026,7 +3026,6 @@ if (!function_exists('PHPUnit\Framework\throwException')) {
 }
 
 if (!function_exists('PHPUnit\Framework\onConsecutiveCalls')) {
-
     function onConsecutiveCalls(): ConsecutiveCallsStub
     {
         $args = func_get_args();

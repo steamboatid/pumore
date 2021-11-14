@@ -134,7 +134,7 @@ jobs:
         run: bash ./build/scripts/sanity-check
 
       - name: Run tests with phpunit
-        run: php ./phpunit -v
+        run: php ./phpunit
 
   code-coverage:
     name: Code Coverage
